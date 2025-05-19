@@ -1,0 +1,98 @@
+import { v4 as uuidv4 } from "./uuid"
+import type { Deck } from "@/types/flashcard"
+
+export const initialDecks: Deck[] = [
+  {
+    id: "1",
+    title: "JavaScript Fundamentals",
+    description: "Core concepts of JavaScript programming language",
+    created: new Date().toISOString(),
+    lastStudied: null,
+    cards: [
+      {
+        id: uuidv4(),
+        front: "What is a closure in JavaScript?",
+        back: "A closure is the combination of a function bundled together with references to its surrounding state (the lexical environment). In JavaScript, closures are created every time a function is created, at function creation time.",
+        created: new Date().toISOString(),
+        lastReview: null,
+        nextReview: null,
+        interval: 0,
+        easeFactor: 2.5,
+        repetitions: 0,
+      },
+      {
+        id: uuidv4(),
+        front: "Explain the concept of hoisting in JavaScript.",
+        back: "Hoisting is JavaScript's default behavior of moving declarations to the top of the current scope. Variables defined with `var` are hoisted to the top of their scope and initialized with a value of `undefined`. Function declarations are also hoisted and can be used before they are declared.",
+        created: new Date().toISOString(),
+        lastReview: null,
+        nextReview: null,
+        interval: 0,
+        easeFactor: 2.5,
+        repetitions: 0,
+      },
+      {
+        id: uuidv4(),
+        front: "What is the difference between `==` and `===` in JavaScript?",
+        back: "`==` (loose equality) compares values after converting them to a common type, while `===` (strict equality) compares both value and type without any type conversion.",
+        created: new Date().toISOString(),
+        lastReview: null,
+        nextReview: null,
+        interval: 0,
+        easeFactor: 2.5,
+        repetitions: 0,
+      },
+    ],
+  },
+  {
+    id: "2",
+    title: "React Hooks",
+    description: "Modern React hooks and their usage",
+    created: new Date().toISOString(),
+    lastStudied: null,
+    cards: [
+      {
+        id: uuidv4(),
+        front: "What is the purpose of `useState` hook?",
+        back: "`useState` is a Hook that lets you add React state to function components. It returns a stateful value and a function to update it, allowing you to track and update state in a functional component.",
+        created: new Date().toISOString(),
+        lastReview: null,
+        nextReview: null,
+        interval: 0,
+        easeFactor: 2.5,
+        repetitions: 0,
+      },
+      {
+        id: uuidv4(),
+        front: "How does `useEffect` work?",
+        back: "`useEffect` lets you perform side effects in function components. It runs after every completed render by default, but you can customize it to run only when certain values change by providing a dependency array.",
+        created: new Date().toISOString(),
+        lastReview: null,
+        nextReview: null,
+        interval: 0,
+        easeFactor: 2.5,
+        repetitions: 0,
+      },
+      {
+        id: uuidv4(),
+        front: "What problem does `useContext` solve?",
+        back: "`useContext` provides a way to pass data through the component tree without having to pass props down manually at every level. It helps avoid prop drilling and makes global state more accessible.",
+        created: new Date().toISOString(),
+        lastReview: null,
+        nextReview: null,
+        interval: 0,
+        easeFactor: 2.5,
+        repetitions: 0,
+      },
+    ],
+  },
+]
+
+export const initialStats = {
+  totalReviews: 0,
+  reviewsToday: 0,
+  currentStreak: 0,
+  longestStreak: 0,
+  totalXP: 0,
+  lastReviewDate: null,
+}
